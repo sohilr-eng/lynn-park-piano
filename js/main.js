@@ -30,10 +30,10 @@
 
 // INTEREST FORM: paste your Formspree endpoint here
 // e.g. 'https://formspree.io/f/abcdefgh'
-const INTEREST_FORM_ENDPOINT = 'https://formspree.io/f/INTEREST_FORM_ID';
+const INTEREST_FORM_ENDPOINT = 'https://formspree.io/f/xojkeogy';
 
 // BOOKING FORM: paste your Formspree endpoint here
-const BOOKING_FORM_ENDPOINT  = 'https://formspree.io/f/BOOKING_FORM_ID';
+const BOOKING_FORM_ENDPOINT  = 'https://formspree.io/f/mpqypgvn';
 
 // Fallback email shown in error messages
 const CONTACT_EMAIL = 'lynnmpk@gmail.com';
