@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- [REPLACE WITH REAL META DESCRIPTION] -->
-  <meta name="description" content="Book a free 15-minute introductory Zoom meeting with Lynn Park. Let's talk about your musical goals and how lessons can help you get there." />
+  <meta name="description" content="Book a free 15-minute introductory Zoom meeting with Lynn Park to discuss your musical goals and find out if lessons are the right fit." />
   <title>Schedule an Intro Meeting — Lynn Park Piano Studio</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="stylesheet" href="css/styles.css" />
@@ -41,7 +40,6 @@
     <div class="page-banner__inner">
       <span class="section-label">Schedule a Meeting</span>
       <h1>Book Your Free Intro Call</h1>
-      <!-- [REPLACE WITH REAL SUBTITLE] -->
       <p>"No commitment — just a friendly 15-minute conversation about your musical journey."</p>
     </div>
   </header>
@@ -49,62 +47,52 @@
 
   <!-- ============================================================
        BOOKING SECTION
-       ─ Callout note + booking form card
-       ─ Submissions are saved to localStorage (key: lynnpark_booking_submissions)
-       ─ To connect to a real backend or Calendly, see notes below the form
   ============================================================ -->
   <section class="schedule-section section-cream" aria-label="Book an introductory Zoom meeting">
     <div class="container">
 
-      <!-- ── Section Intro ── -->
+      <!-- Section Intro -->
       <div style="max-width: 680px; margin: 0 auto 48px; text-align: center;" class="fade-up">
         <div class="ornament ornament--center" aria-hidden="true">
           <div class="diamond"></div>
         </div>
         <span class="section-label">Free Introductory Meeting</span>
         <h2 style="margin-top: 8px;">Let's Meet Over Zoom</h2>
-        <!-- [REPLACE WITH REAL INTRO PARAGRAPH] -->
         <p style="margin-top: 16px;">
-          Before committing to lessons, Lynn invites all prospective students and parents to a <strong>free 15-minute introductory Zoom meeting</strong>. It's a chance to meet, discuss your goals, ask any questions, and find out if it's the right fit — with no pressure and no obligation.
+          Before committing to lessons, Lynn invites all prospective students and parents to a <strong>free 15-minute introductory Zoom meeting</strong>. It's a chance to meet, discuss your musical goals, ask any questions, and find out if it's the right fit — with no pressure and no obligation.
         </p>
       </div>
 
-      <!-- ── What to Expect Callout ── -->
+      <!-- Callout -->
       <div class="schedule-callout fade-up">
         <div class="schedule-callout__icon" aria-hidden="true">🎹</div>
         <p>
-          <strong>Book a free 15-minute introductory Zoom meeting with Lynn.</strong><br>
-          <!-- [REPLACE WITH REAL DESCRIPTION OF WHAT HAPPENS IN THE INTRO CALL] -->
-          You'll briefly introduce yourself (or your child), share your musical goals, and Lynn will suggest the best lesson format and level. You'll leave with a clear picture of what lessons with Lynn look like.
+          <strong>Book a free 15-minute introductory Zoom meeting with Lynn to discuss your musical goals.</strong><br>
+          You'll share a little about yourself (or your child), and Lynn will suggest the best lesson format, duration, and approach. You'll leave with a clear picture of what lessons look like — and whether it's the right fit.
         </p>
       </div>
 
       <!--
-        ── FUTURE CALENDLY INTEGRATION NOTE ──
-        When you're ready to embed a real scheduling widget (e.g. Calendly),
-        replace the entire <div class="schedule-form-card"> block below with:
+        FUTURE CALENDLY INTEGRATION NOTE:
+        Replace the <div class="schedule-form-card"> block below with a Calendly embed:
 
         <div style="max-width: 700px; margin: 0 auto;">
-          <!-- Inline embed -->
           <div class="calendly-inline-widget"
                data-url="https://calendly.com/[YOUR-USERNAME]/intro-zoom"
                style="min-width:320px; height:700px;">
           </div>
           <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
         </div>
-
-        Or use the Calendly popup badge widget in the <head>.
       -->
 
-      <!-- ── Booking Form Card ── -->
+      <!-- Booking Form Card -->
       <div class="schedule-form-card fade-up">
 
-        <!-- Success message (shown after submission, hidden by default) -->
+        <!-- Success message -->
         <div class="schedule-success" id="scheduleFormSuccess" role="alert" style="display: none;">
           <h3>Booking Request Received!</h3>
           <p>
             Thank you — Lynn will personally reach out within <strong>1–2 business days</strong> to confirm your meeting time and send you the Zoom link.<br><br>
-            <!-- [REPLACE WITH REAL RESPONSE TIME / NEXT STEPS] -->
             In the meantime, feel free to explore the <a href="lessons.html" style="color: var(--gold-dark); text-decoration: underline;">Lessons &amp; Pricing</a> page to learn more about what to expect.
           </p>
         </div>
@@ -115,7 +103,6 @@
           <div style="margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid var(--border);">
             <h3 style="color: var(--navy); font-size: 1.3rem; margin-bottom: 6px;">Your Details</h3>
             <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">
-              <!-- [REPLACE WITH REAL INSTRUCTIONS / NOTE] -->
               All fields marked <span aria-hidden="true" style="color: var(--gold);">*</span> are required. Lynn will reach out by email to confirm your preferred time.
             </p>
           </div>
@@ -140,7 +127,7 @@
             </div>
             <div class="form-group">
               <label for="sch-age">Student Age <span aria-hidden="true" style="color: var(--gold)">*</span></label>
-              <input type="text" id="sch-age" name="studentAge" placeholder='e.g. "10" or "Adult (35)"' required />
+              <input type="text" id="sch-age" name="studentAge" placeholder='e.g. "7" or "Adult (32)"' required />
             </div>
           </div>
 
@@ -154,7 +141,6 @@
               <label for="sch-time">Preferred Time <span aria-hidden="true" style="color: var(--gold)">*</span></label>
               <select id="sch-time" name="preferredTime" required>
                 <option value="" disabled selected>Select a time slot…</option>
-                <!-- [REPLACE THESE TIME SLOTS WITH LYNN'S ACTUAL AVAILABILITY] -->
                 <optgroup label="Morning">
                   <option value="9:00am">9:00 AM</option>
                   <option value="9:30am">9:30 AM</option>
@@ -179,14 +165,13 @@
             </div>
           </div>
 
-          <!-- Row 4: Experience Level + (empty / full width placeholder) -->
+          <!-- Row 4: Experience Level + Lesson Format -->
           <div class="form-row">
             <div class="form-group">
               <label for="sch-level">Experience Level <span aria-hidden="true" style="color: var(--gold)">*</span></label>
               <select id="sch-level" name="experienceLevel" required>
                 <option value="" disabled selected>Select level…</option>
-                <option value="complete-beginner">Complete beginner</option>
-                <option value="some-basics">Beginner — some basics</option>
+                <option value="beginner">Beginner</option>
                 <option value="intermediate">Intermediate</option>
                 <option value="advanced">Advanced</option>
                 <option value="returning">Returning after a break</option>
@@ -196,14 +181,14 @@
               <label for="sch-format">Preferred Lesson Format</label>
               <select id="sch-format" name="lessonFormat">
                 <option value="" disabled selected>Select format…</option>
-                <option value="in-person">In-person (studio)</option>
-                <option value="online">Online (Zoom)</option>
+                <option value="in-person">In-person at my home (Princeton, NJ area)</option>
+                <option value="online">Online via Zoom</option>
                 <option value="flexible">Either / Flexible</option>
               </select>
             </div>
           </div>
 
-          <!-- Message (full width) -->
+          <!-- Message -->
           <div class="form-group full">
             <label for="sch-message">Anything Else Lynn Should Know?</label>
             <textarea id="sch-message" name="message" placeholder="Tell Lynn a little about yourself or your child, your musical goals, any previous experience, or questions you'd like to discuss during the call…"></textarea>
@@ -211,11 +196,9 @@
 
           <!-- Timezone note -->
           <p style="font-size: 0.82rem; color: var(--text-light); font-style: italic; margin-bottom: 28px;">
-            <!-- [REPLACE WITH REAL TIMEZONE / AVAILABILITY NOTE] -->
-            All times are in <strong>[TIMEZONE, e.g. Eastern Standard Time / AEST]</strong>. Lynn will confirm availability for your selected time and may suggest an alternative if needed.
+            All times are in <strong>Eastern Time (ET)</strong>. Lynn will confirm availability for your selected time and may suggest an alternative if needed.
           </p>
 
-          <!-- Submit -->
           <div style="text-align: center;">
             <button type="submit" class="btn btn-primary">Request My Intro Meeting</button>
           </div>
@@ -224,44 +207,47 @@
 
       </div><!-- end .schedule-form-card -->
 
-      <!-- ── FAQ row ── -->
+      <!-- FAQ Section -->
       <div style="max-width: 680px; margin: 64px auto 0;" class="fade-up">
         <h3 style="text-align: center; font-size: 1.3rem; color: var(--navy); margin-bottom: 36px;">Common Questions</h3>
 
         <div style="display: flex; flex-direction: column; gap: 20px;">
 
-          <!-- FAQ 1 — [REPLACE WITH REAL Q&A] -->
           <details style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px;">
             <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--font-serif); font-size: 1rem;">
-              [REPLACE WITH REAL FAQ QUESTION — e.g. "Do I need my own piano to start?"]
+              Do I need my own piano to start?
             </summary>
             <p style="margin-top: 14px; font-size: 0.93rem;">
-              <!-- [REPLACE WITH REAL ANSWER] -->
-              [Answer to the question goes here. Keep it concise and helpful — 2-4 sentences.]
+              Yes — for in-person lessons, you'll need a piano or keyboard at home since Lynn comes to you. A full-size (88-key) weighted keyboard is a great starting point and more affordable than an acoustic piano. Lynn is happy to give recommendations during your intro call.
             </p>
           </details>
 
-          <!-- FAQ 2 — [REPLACE WITH REAL Q&A] -->
           <details style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px;">
             <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--font-serif); font-size: 1rem;">
-              [REPLACE WITH REAL FAQ QUESTION — e.g. "How often are lessons?"]
+              What is the minimum age to start lessons?
             </summary>
             <p style="margin-top: 14px; font-size: 0.93rem;">
-              [Answer goes here.]
+              Lynn welcomes students as young as 4 years old. At this age, lessons are short (30 minutes), playful, and focused on building a joyful relationship with the instrument. Every child develops differently, so the intro call is a great way to assess readiness.
             </p>
           </details>
 
-          <!-- FAQ 3 — [REPLACE WITH REAL Q&A] -->
           <details style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px;">
             <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--font-serif); font-size: 1rem;">
-              [REPLACE WITH REAL FAQ QUESTION — e.g. "What is your cancellation policy?"]
+              How often are lessons?
             </summary>
             <p style="margin-top: 14px; font-size: 0.93rem;">
-              [Answer goes here.]
+              Weekly lessons are strongly recommended for consistent progress. This gives students enough time to practice between sessions while maintaining good momentum. Lynn can discuss scheduling options during your introductory call.
             </p>
           </details>
 
-          <!-- [ADD MORE FAQ ITEMS AS NEEDED — copy/paste a <details> block above] -->
+          <details style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px;">
+            <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--font-serif); font-size: 1rem;">
+              Which lesson length should I choose?
+            </summary>
+            <p style="margin-top: 14px; font-size: 0.93rem;">
+              The 30-minute lesson ($50) is recommended for children ages 4–8 who are just starting out. The 45-minute lesson ($70) suits most pre-teens and intermediate students. The 60-minute lesson ($80) is ideal for teens, adults, and more advanced students who want deeper musical exploration. Lynn will help you choose during the intro call.
+            </p>
+          </details>
 
         </div>
       </div>
@@ -316,10 +302,9 @@
         <div class="footer__col">
           <h5>Contact</h5>
           <address>
-            <a href="mailto:hello@lynnparkpiano.com">hello@lynnparkpiano.com</a><br>
-            <a href="tel:+10000000000">[Phone Number]</a><br><br>
-            [Studio Address / City, State]<br>
-            Online lessons available worldwide
+            <a href="mailto:hello@lynnparkpiano.com">hello@lynnparkpiano.com</a><br><br>
+            Princeton, New Jersey<br>
+            In-person &amp; online lessons available
           </address>
         </div>
 
@@ -327,7 +312,7 @@
 
       <div class="footer__bottom">
         <span>&copy; 2025 Lynn Park Piano Studio. All rights reserved.</span>
-        <span>[City, State]</span>
+        <span>Princeton, New Jersey</span>
       </div>
     </div>
   </footer>
