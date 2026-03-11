@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- [REPLACE WITH REAL META DESCRIPTION] -->
+  <meta name="description" content="Book a free 15-minute introductory Zoom meeting with Lynn Park. Let's talk about your musical goals and how lessons can help you get there." />
+  <title>Schedule an Intro Meeting — Lynn Park Piano Studio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+  ============================================================ -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Lynn Park <em>Piano</em></a>
+
+      <ul class="nav__menu" id="navMenu" role="menubar">
+        <li role="none"><a href="index.html" role="menuitem">Home</a></li>
+        <li role="none"><a href="about.html" role="menuitem">About</a></li>
+        <li role="none"><a href="lessons.html" role="menuitem">Lessons</a></li>
+        <li role="none"><a href="schedule.html" class="btn-nav" role="menuitem">Book Intro Call</a></li>
+      </ul>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ============================================================
+       PAGE BANNER
+  ============================================================ -->
+  <header class="page-banner" role="banner">
+    <div class="page-banner__inner">
+      <span class="section-label">Schedule a Meeting</span>
+      <h1>Book Your Free Intro Call</h1>
+      <!-- [REPLACE WITH REAL SUBTITLE] -->
+      <p>"No commitment — just a friendly 15-minute conversation about your musical journey."</p>
+    </div>
+  </header>
+
+
+  <!-- ============================================================
+       BOOKING SECTION
+       ─ Callout note + booking form card
+       ─ Submissions are saved to localStorage (key: lynnpark_booking_submissions)
+       ─ To connect to a real backend or Calendly, see notes below the form
+  ============================================================ -->
+  <section class="schedule-section section-cream" aria-label="Book an introductory Zoom meeting">
+    <div class="container">
+
+      <!-- ── Section Intro ── -->
+      <div style="max-width: 680px; margin: 0 auto 48px; text-align: center;" class="fade-up">
+        <div class="ornament ornament--center" aria-hidden="true">
+          <div class="diamond"></div>
+        </div>
+        <span class="section-label">Free Introductory Meeting</span>
+        <h2 style="margin-top: 8px;">Let's Meet Over Zoom</h2>
+        <!-- [REPLACE WITH REAL INTRO PARAGRAPH] -->
+        <p style="margin-top: 16px;">
+          Before committing to lessons, Lynn invites all prospective students and parents to a <strong>free 15-minute introductory Zoom meeting</strong>. It's a chance to meet, discuss your goals, ask any questions, and find out if it's the right fit — with no pressure and no obligation.
+        </p>
+      </div>
+
+      <!-- ── What to Expect Callout ── -->
+      <div class="schedule-callout fade-up">
+        <div class="schedule-callout__icon" aria-hidden="true">🎹</div>
+        <p>
+          <strong>Book a free 15-minute introductory Zoom meeting with Lynn.</strong><br>
+          <!-- [REPLACE WITH REAL DESCRIPTION OF WHAT HAPPENS IN THE INTRO CALL] -->
+          You'll briefly introduce yourself (or your child), share your musical goals, and Lynn will suggest the best lesson format and level. You'll leave with a clear picture of what lessons with Lynn look like.
+        </p>
+      </div>
+
+      <!--
+        ── FUTURE CALENDLY INTEGRATION NOTE ──
+        When you're ready to embed a real scheduling widget (e.g. Calendly),
+        replace the entire <div class="schedule-form-card"> block below with:
+
+        <div style="max-width: 700px; margin: 0 auto;">
+          <!-- Inline embed -->
+          <div class="calendly-inline-widget"
+               data-url="https://calendly.com/[YOUR-USERNAME]/intro-zoom"
+               style="min-width:320px; height:700px;">
+          </div>
+          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        </div>
+
+        Or use the Calendly popup badge widget in the <head>.
+      -->
+
+      <!-- ── Booking Form Card ── -->
+      <div class="schedule-form-card fade-up">
+
+        <!-- Success message (shown after submission, hidden by default) -->
+        <div class="schedule-success" id="scheduleFormSuccess" role="alert" style="display: none;">
+          <h3>Booking Request Received!</h3>
+          <p>
+            Thank you — Lynn will personally reach out within <strong>1–2 business days</strong> to confirm your meeting time and send you the Zoom link.<br><br>
+            <!-- [REPLACE WITH REAL RESPONSE TIME / NEXT STEPS] -->
+            In the meantime, feel free to explore the <a href="lessons.html" style="color: var(--gold-dark); text-decoration: underline;">Lessons &amp; Pricing</a> page to learn more about what to expect.
+          </p>
+        </div>
+
+        <!-- Booking Form -->
+        <form id="scheduleForm" novalidate aria-label="Introductory meeting booking form">
+
+          <div style="margin-bottom: 36px; padding-bottom: 28px; border-bottom: 1px solid var(--border);">
+            <h3 style="color: var(--navy); font-size: 1.3rem; margin-bottom: 6px;">Your Details</h3>
+            <p style="font-size: 0.9rem; color: var(--text-light); margin: 0;">
+              <!-- [REPLACE WITH REAL INSTRUCTIONS / NOTE] -->
+              All fields marked <span aria-hidden="true" style="color: var(--gold);">*</span> are required. Lynn will reach out by email to confirm your preferred time.
+            </p>
+          </div>
+
+          <!-- Row 1: Name + Email -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sch-name">Full Name <span aria-hidden="true" style="color: var(--gold)">*</span></label>
+              <input type="text" id="sch-name" name="name" placeholder="Your full name" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="sch-email">Email Address <span aria-hidden="true" style="color: var(--gold)">*</span></label>
+              <input type="email" id="sch-email" name="email" placeholder="your@email.com" required autocomplete="email" />
+            </div>
+          </div>
+
+          <!-- Row 2: Phone + Student Age -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sch-phone">Phone Number</label>
+              <input type="tel" id="sch-phone" name="phone" placeholder="+1 (000) 000-0000" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="sch-age">Student Age <span aria-hidden="true" style="color: var(--gold)">*</span></label>
+              <input type="text" id="sch-age" name="studentAge" placeholder='e.g. "10" or "Adult (35)"' required />
+            </div>
+          </div>
+
+          <!-- Row 3: Preferred Date + Preferred Time -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sch-date">Preferred Date <span aria-hidden="true" style="color: var(--gold)">*</span></label>
+              <input type="date" id="sch-date" name="preferredDate" required />
+            </div>
+            <div class="form-group">
+              <label for="sch-time">Preferred Time <span aria-hidden="true" style="color: var(--gold)">*</span></label>
+              <select id="sch-time" name="preferredTime" required>
+                <option value="" disabled selected>Select a time slot…</option>
+                <!-- [REPLACE THESE TIME SLOTS WITH LYNN'S ACTUAL AVAILABILITY] -->
+                <optgroup label="Morning">
+                  <option value="9:00am">9:00 AM</option>
+                  <option value="9:30am">9:30 AM</option>
+                  <option value="10:00am">10:00 AM</option>
+                  <option value="10:30am">10:30 AM</option>
+                  <option value="11:00am">11:00 AM</option>
+                  <option value="11:30am">11:30 AM</option>
+                </optgroup>
+                <optgroup label="Afternoon">
+                  <option value="12:00pm">12:00 PM</option>
+                  <option value="1:00pm">1:00 PM</option>
+                  <option value="2:00pm">2:00 PM</option>
+                  <option value="3:00pm">3:00 PM</option>
+                  <option value="4:00pm">4:00 PM</option>
+                  <option value="5:00pm">5:00 PM</option>
+                </optgroup>
+                <optgroup label="Evening">
+                  <option value="6:00pm">6:00 PM</option>
+                  <option value="7:00pm">7:00 PM</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+
+          <!-- Row 4: Experience Level + (empty / full width placeholder) -->
+          <div class="form-row">
+            <div class="form-group">
+              <label for="sch-level">Experience Level <span aria-hidden="true" style="color: var(--gold)">*</span></label>
+              <select id="sch-level" name="experienceLevel" required>
+                <option value="" disabled selected>Select level…</option>
+                <option value="complete-beginner">Complete beginner</option>
+                <option value="some-basics">Beginner — some basics</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+                <option value="returning">Returning after a break</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="sch-format">Preferred Lesson Format</label>
+              <select id="sch-format" name="lessonFormat">
+                <option value="" disabled selected>Select format…</option>
+                <option value="in-person">In-person (studio)</option>
+                <option value="online">Online (Zoom)</option>
+                <option value="flexible">Either / Flexible</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message (full width) -->
+          <div class="form-group full">
+            <label for="sch-message">Anything Else Lynn Should Know?</label>
+            <textarea id="sch-message" name="message" placeholder="Tell Lynn a little about yourself or your child, your musical goals, any previous experience, or questions you'd like to discuss during the call…"></textarea>
+          </div>
+
+          <!-- Timezone note -->
+          <p style="font-size: 0.82rem; color: var(--text-light); font-style: italic; margin-bottom: 28px;">
+            <!-- [REPLACE WITH REAL TIMEZONE / AVAILABILITY NOTE] -->
+            All times are in <strong>[TIMEZONE, e.g. Eastern Standard Time / AEST]</strong>. Lynn will confirm availability for your selected time and may suggest an alternative if needed.
+          </p>
+
+          <!-- Submit -->
+          <div style="text-align: center;">
+            <button type="submit" class="btn btn-primary">Request My Intro Meeting</button>
+          </div>
+
+        </form>
+
+      </div><!-- end .schedule-form-card -->
+
+      <!-- ── FAQ row ── -->
+      <div style="max-width: 680px; margin: 64px auto 0;" class="fade-up">
+        <h3 style="text-align: center; font-size: 1.3rem; color: var(--navy); margin-bottom: 36px;">Common Questions</h3>
+
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+
+          <!-- FAQ 1 — [REPLACE WITH REAL Q&A] -->
+          <details style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px;">
+            <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--font-serif); font-size: 1rem;">
+              [REPLACE WITH REAL FAQ QUESTION — e.g. "Do I need my own piano to start?"]
+            </summary>
+            <p style="margin-top: 14px; font-size: 0.93rem;">
+              <!-- [REPLACE WITH REAL ANSWER] -->
+              [Answer to the question goes here. Keep it concise and helpful — 2-4 sentences.]
+            </p>
+          </details>
+
+          <!-- FAQ 2 — [REPLACE WITH REAL Q&A] -->
+          <details style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px;">
+            <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--font-serif); font-size: 1rem;">
+              [REPLACE WITH REAL FAQ QUESTION — e.g. "How often are lessons?"]
+            </summary>
+            <p style="margin-top: 14px; font-size: 0.93rem;">
+              [Answer goes here.]
+            </p>
+          </details>
+
+          <!-- FAQ 3 — [REPLACE WITH REAL Q&A] -->
+          <details style="background: var(--white); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 20px 24px;">
+            <summary style="font-weight: 700; color: var(--navy); cursor: pointer; font-family: var(--font-serif); font-size: 1rem;">
+              [REPLACE WITH REAL FAQ QUESTION — e.g. "What is your cancellation policy?"]
+            </summary>
+            <p style="margin-top: 14px; font-size: 0.93rem;">
+              [Answer goes here.]
+            </p>
+          </details>
+
+          <!-- [ADD MORE FAQ ITEMS AS NEEDED — copy/paste a <details> block above] -->
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <div class="footer__brand">
+          <a href="index.html" class="footer__logo">Lynn Park <em>Piano</em></a>
+          <p>A piano studio dedicated to musical growth, creative expression, and the joy of playing — for students of all ages and levels.</p>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="#" aria-label="Instagram" title="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="Facebook" title="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube" title="YouTube">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.97C18.88 4 12 4 12 4s-6.88 0-8.59.45a2.78 2.78 0 0 0-1.95 1.97A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.94-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Lynn</a></li>
+            <li><a href="lessons.html">Lessons &amp; Pricing</a></li>
+            <li><a href="schedule.html">Book Intro Meeting</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h5>Contact</h5>
+          <address>
+            <a href="mailto:hello@lynnparkpiano.com">hello@lynnparkpiano.com</a><br>
+            <a href="tel:+10000000000">[Phone Number]</a><br><br>
+            [Studio Address / City, State]<br>
+            Online lessons available worldwide
+          </address>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <span>&copy; 2025 Lynn Park Piano Studio. All rights reserved.</span>
+        <span>[City, State]</span>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
